@@ -194,11 +194,26 @@ function update() {
   requestAnimationFrame(update);
 }
 
-// Event Listeners
+
+
+const leftButton = document.getElementById('left-btn');
+const rightButton = document.getElementById('right-btn');
+
+
+leftButton.addEventListener('touchstart', () => paddle.dx = -paddle.speed);
+leftButton.addEventListener('touchend', () => paddle.dx = 0);
+rightButton.addEventListener('touchstart', () => paddle.dx = paddle.speed);
+rightButton.addEventListener('touchend', () => paddle.dx = 0);
+
+leftButton.addEventListener('mousedown', () => paddle.dx = -paddle.speed);
+leftButton.addEventListener('mouseup', () => paddle.dx = 0);
+rightButton.addEventListener('mousedown', () => paddle.dx = paddle.speed);
+rightButton.addEventListener('mouseup', () => paddle.dx = 0);
+
 document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
 rulesButton.addEventListener("click", () => rules.classList.add("show"));
 closeButton.addEventListener("click", () => rules.classList.remove("show"));
 
-// Init
+
 update();
