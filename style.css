@@ -90,3 +90,24 @@ canvas {
 .rules.show {
   transform: translateX(0);
 }
+
+
+#mobile-controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#mobile-controls .btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+}
